@@ -3,7 +3,7 @@
 @import "common";
 
 body {
-  background: url(../images/bg.png);
+  background: url(./images/bg.png);
   color: #000;
 }
 
@@ -18,11 +18,15 @@ body {
 
 .logo_wrap {
 
-  background: url(../images/bg_wood.png);
+  background: url(./images/bg_wood.png);
   @include radius(5px);
   @include box-shadow(4px 4px 7px rgba(black, 0.3));
-  p {
-    padding-top: 60px;
+  .slogan {
+    margin-top: 60px;
+    width: 119px;
+    height: 39px;
+    background: url(./images/slogan.png) no-repeat;
+    @include background-size(100% auto);
   }
   .sticker {
     padding: 6px 26px;
@@ -32,13 +36,22 @@ body {
     display: block;
     width: 16px;
     height: 66px;
-    background: url(../images/rope.png);
+    background: url(./images/rope.png);
   }
   .rope_left {
     left: 60px;
   }
   .rope_right {
+    
     right: 60px;
+  }
+
+  .logo {
+    width: 77px;
+    height: 99px;
+    display: block;
+    background: url(./images/logo.png) no-repeat;
+    @include background-size(100% auto);
   }
 
   @include screen(740px) {
@@ -50,14 +63,22 @@ body {
     .sticker {
       padding: 6px 15px;
     }
-    img {
+    .logo {
       width: 50px;
+      height: 60px;
     }
   }
 
 }
 
 .logo_in {
+
+  .logo_txt {
+    width: 228px;
+    height: 30px;
+    background: url(./images/logo_txt.png) no-repeat;
+    @include background-size(100% auto);
+  }
   padding: 10px 86px;
   @include screen(620px) {
     padding: 10px 20px;
@@ -85,7 +106,7 @@ body {
     display: block;
     color: #fff;
     margin-right: 15px;
-    background: url(../images/paper_color.png) no-repeat center center;
+    background: url(./images/paper_color.png) no-repeat center center;
     @include transition(0.3s);
     @include background-size(150px auto);
     &:hover {
@@ -190,7 +211,7 @@ body {
     display: block;
     width: 27px;
     height: 24px;
-    background: url(../images/zoom.png) no-repeat center center;
+    background: url(./images/zoom.png) no-repeat center center;
   }
 }
 
@@ -273,7 +294,7 @@ body {
     font-size: 12px;
     margin: 5px 5px 0 0;
     padding: 5px;
-    background: url(../images/paper_color.png) no-repeat center center;
+    background: url(./images/paper_color.png) no-repeat center center;
     background-color: #8cc37f;
     @include background-size(200px auto);
     @include box-shadow(3px 3px 5px rgba(#000, 0.1));
@@ -373,7 +394,7 @@ body {
   font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
   padding: 15px;
   margin-bottom: 10px;
-  background: url(../images/bg_paper.png);
+  background: url(./images/bg_paper.png);
 }
 
 .commentsWrap li.comment .reply {
