@@ -1,9 +1,10 @@
 @import "mobile";
 @import "reset";
 @import "common";
+@import "pagination";
 
 body {
-  background: url(./images/bg.png);
+  background: url(/build/images/bg.png);
   color: #000;
 }
 
@@ -18,14 +19,14 @@ body {
 
 .logo_wrap {
 
-  background: url(./images/bg_wood.png);
+  background: url(/build/images/bg_wood.png);
   @include radius(5px);
   @include box-shadow(4px 4px 7px rgba(black, 0.3));
   .slogan {
     margin-top: 60px;
     width: 119px;
     height: 39px;
-    background: url(./images/slogan.png) no-repeat;
+    background: url(/build/images/slogan.png) no-repeat;
     @include background-size(100% auto);
   }
   .sticker {
@@ -36,13 +37,13 @@ body {
     display: block;
     width: 16px;
     height: 66px;
-    background: url(./images/rope.png);
+    background: url(/build/images/rope.png);
   }
   .rope_left {
     left: 60px;
   }
   .rope_right {
-    
+
     right: 60px;
   }
 
@@ -50,7 +51,7 @@ body {
     width: 77px;
     height: 99px;
     display: block;
-    background: url(./images/logo.png) no-repeat;
+    background: url(/build/images/logo.png) no-repeat;
     @include background-size(100% auto);
   }
 
@@ -76,7 +77,7 @@ body {
   .logo_txt {
     width: 228px;
     height: 30px;
-    background: url(./images/logo_txt.png) no-repeat;
+    background: url(/build/images/logo_txt.png) no-repeat;
     @include background-size(100% auto);
   }
   padding: 10px 86px;
@@ -106,7 +107,7 @@ body {
     display: block;
     color: #fff;
     margin-right: 15px;
-    background: url(./images/paper_color.png) no-repeat center center;
+    background: url(/build/images/paper_color.png) no-repeat center center;
     @include transition(0.3s);
     @include background-size(150px auto);
     &:hover {
@@ -211,7 +212,7 @@ body {
     display: block;
     width: 27px;
     height: 24px;
-    background: url(./images/zoom.png) no-repeat center center;
+    background: url(/build/images/zoom.png) no-repeat center center;
   }
 }
 
@@ -294,7 +295,7 @@ body {
     font-size: 12px;
     margin: 5px 5px 0 0;
     padding: 5px;
-    background: url(./images/paper_color.png) no-repeat center center;
+    background: url(/build/images/paper_color.png) no-repeat center center;
     background-color: #8cc37f;
     @include background-size(200px auto);
     @include box-shadow(3px 3px 5px rgba(#000, 0.1));
@@ -311,6 +312,7 @@ body {
     p {
       line-height: 2em;
       margin: 10px 0;
+      word-break: break-word;
     }
   }
 }
@@ -394,7 +396,7 @@ body {
   font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
   padding: 15px;
   margin-bottom: 10px;
-  background: url(./images/bg_paper.png);
+  background: url(/build/images/bg_paper.png);
 }
 
 .commentsWrap li.comment .reply {
@@ -434,17 +436,62 @@ body {
 
 .commentsWrap li.comment p {
   line-height: 2em;
+  word-break: break-word;
 }
 
 .commentsWrap li.comment .img {
   float: left;
   margin-right: 15px;
+  width: 100px;
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media (max-width: 640px) {
   .commentsWrap li.comment .img {
-    display: none;
+    width: 50px;
+    margin-right: 10px;
   }
 }
 
+.example-enter {
+  opacity: 0.01;
+}
 
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+.scale-enter {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.scale-enter.scale-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: 500ms ease-in;
+}
+
+.scale-leave {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.scale-leave.scale-leave-active {
+  opacity: 0;
+  transform: scale(0);
+  transition: 300ms ease-in;
+}

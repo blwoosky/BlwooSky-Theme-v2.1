@@ -111,7 +111,7 @@ h3{
 }
 
 .paper{
-	background:url(./images/paper_color.png) no-repeat center center;
+	background:url(/build/images/paper_color.png) no-repeat center center;
 }
 .paper_white{
 	background-color:#fbfbfb;
@@ -151,7 +151,7 @@ h3{
 		height:22px;
 		position:absolute;
 		top:-8px;
-		background:url(./images/sticker.png) no-repeat;
+		background:url(/build/images/sticker.png) no-repeat;
 	}
 	&:before{
 		left:-11px;
@@ -164,7 +164,7 @@ h3{
 }
 
 .line_paper{
-	background:url(./images/bg_paper.png);
+	background:url(/build/images/bg_paper.png);
 }
 
 .shadow{

@@ -1,8 +1,9 @@
 import { createStore,applyMiddleware } from 'redux';
-import Async from './../middlewares/async';
+//import Async from './../middlewares/async';
+import ReduxPromise from "redux-promise";
 import rootReducer from '../reducers';
 
-const createStoreWithMiddleware = applyMiddleware(Async)(createStore);
+const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 
 export default function configureStore(initialState) {
 

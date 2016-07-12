@@ -1,5 +1,6 @@
 import React, { Component,Children } from 'react';
-//import Header from './Header';
+import Header from './Header';
+import Footer from './Footer';
 
 export default class Main extends Component {
 
@@ -11,12 +12,13 @@ export default class Main extends Component {
         return (
             <div className="w">
                 <div className="pl20 pr20">
-                    <div className="loadingContent">
+                    <Header/>
+                    <div className="main_content arc_list">
                         {this.props.children}
                     </div>
+                    <Footer/>
                 </div>
             </div>
-
         );
     }
 }
