@@ -55,7 +55,7 @@ export default class Header extends Component {
                         <ul className="fix">
                             <li className="current-menu-item"><Link to="/">首页</Link></li>
                             <li><Link to="/articles">博文</Link></li>
-                            <li><a href="#">留言</a></li>
+                            <li><a href="/guest-book">留言</a></li>
                             <li><a href="#">相片</a></li>
                         </ul>
                     </nav>
